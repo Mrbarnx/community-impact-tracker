@@ -1,0 +1,83 @@
+@use '../mixins' as *;
+
+.projects-section {
+  padding: clamp(2.5rem, 4vw, 4rem) clamp(1.5rem, 3vw, 4.5rem);
+
+  .projects-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2.25rem;
+  }
+
+  .projects-grid {
+    display: grid;
+    gap: 1.75rem;
+
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    @media (min-width: 1200px) {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+
+  .load-more {
+    align-self: center;
+    border: 1px solid var(--color-border);
+    background: var(--color-surface);
+    color: var(--color-text-primary);
+    border-radius: 999px;
+    padding: 0.85rem 2.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform var(--transition-base), background var(--transition-base);
+
+    &:hover,
+    &:focus-visible {
+      background: var(--color-primary);
+      color: #0b1510;
+      transform: translateY(-2px);
+    }
+  }
+}
+
+.empty-state {
+  margin-top: 2rem;
+  background: var(--color-surface);
+  border: 1px dashed var(--color-border);
+  border-radius: 16px;
+  padding: 2.5rem;
+  text-align: center;
+  display: grid;
+  gap: 1rem;
+  color: var(--color-text-secondary);
+
+  h3 {
+    font-family: var(--font-heading);
+    margin: 0;
+    color: var(--color-text-primary);
+  }
+
+  p {
+    margin: 0;
+  }
+
+  button {
+    justify-self: center;
+    padding: 0.8rem 2rem;
+    border: 1px solid var(--color-border);
+    border-radius: 999px;
+    background: transparent;
+    color: var(--color-text-primary);
+    cursor: pointer;
+
+    &:hover,
+    &:focus-visible {
+      background: var(--color-primary);
+      color: #0b1510;
+    }
+  }
+}

@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Work+Sans:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@400&display=swap');
+
+:root {
+  --color-background: #141e18;
+  --color-surface: #1c2921;
+  --color-surface-alt: #1f2f26;
+  --color-border: #2b4034;
+  --color-primary: #2e8a56;
+  --color-primary-accent: #3db56e;
+  --color-primary-light: #4adf8a;
+  --color-secondary: #8fbf9b;
+  --color-text-primary: #f6f8f7;
+  --color-text-secondary: #cbd7d1;
+  --color-text-muted: #97a69f;
+  --color-warning: #f5a524;
+  --color-success: #3cb179;
+  --color-danger: #ff6b6b;
+  --color-overlay: rgba(20, 30, 24, 0.85);
+
+  --shadow-soft: 0px 20px 40px rgba(12, 21, 16, 0.35);
+  --shadow-card: 0px 12px 32px rgba(12, 21, 16, 0.45);
+
+  --font-heading: 'Sora', sans-serif;
+  --font-body: 'Work Sans', sans-serif;
+
+  --transition-base: 0.25s ease;
+}
+
+:root.theme-light {
+  --color-background: #f6f8f7;
+  --color-surface: #ffffff;
+  --color-surface-alt: #e8eeeb;
+  --color-border: #d5ddd8;
+  --color-primary: #2e8a56;
+  --color-primary-accent: #226a42;
+  --color-primary-light: #6acb92;
+  --color-secondary: #426b55;
+  --color-text-primary: #0f1a14;
+  --color-text-secondary: #2c3a32;
+  --color-text-muted: #5c7066;
+  --color-warning: #d4891e;
+  --color-success: #2a7d54;
+  --color-danger: #d45050;
+  --color-overlay: rgba(246, 248, 247, 0.9);
+
+  --shadow-soft: 0px 15px 30px rgba(8, 14, 12, 0.12);
+  --shadow-card: 0px 18px 40px rgba(11, 20, 15, 0.18);
+}

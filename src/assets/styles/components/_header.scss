@@ -1,0 +1,114 @@
+.app-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(20, 30, 24, 0.95);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--color-border);
+
+  .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem clamp(1.5rem, 3vw, 4.5rem);
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+
+    &__mark {
+      width: 40px;
+      height: 40px;
+      border-radius: 14px;
+      background: linear-gradient(140deg, var(--color-primary), var(--color-primary-light));
+      display: grid;
+      place-items: center;
+      color: #0b1510;
+      font-weight: 700;
+      font-family: var(--font-heading);
+    }
+
+    &__text {
+      display: flex;
+      flex-direction: column;
+
+      span {
+        font-size: 0.75rem;
+        color: var(--color-text-muted);
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+      }
+
+      strong {
+        font-size: 1.1rem;
+        font-family: var(--font-heading);
+        letter-spacing: 0.02em;
+      }
+    }
+  }
+
+  nav {
+    display: none;
+    align-items: center;
+    gap: 2rem;
+
+    a {
+      color: var(--color-text-secondary);
+      font-weight: 500;
+      transition: color var(--transition-base);
+
+      &:hover,
+      &:focus-visible {
+        color: var(--color-primary);
+      }
+    }
+
+    @media (min-width: 900px) {
+      display: flex;
+    }
+  }
+
+  .header-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    .toggle-theme {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      border: 1px solid var(--color-border);
+      background: var(--color-surface);
+      color: var(--color-text-primary);
+      display: grid;
+      place-items: center;
+      transition: background var(--transition-base);
+
+      &:hover,
+      &:focus-visible {
+        background: var(--color-primary);
+      }
+    }
+
+    .cta {
+      padding: 0.75rem 1.5rem;
+      border-radius: 999px;
+      border: none;
+      background: var(--color-primary);
+      color: #0b1510;
+      font-weight: 600;
+      font-family: var(--font-heading);
+      transition: transform var(--transition-base), box-shadow var(--transition-base);
+
+      &:hover,
+      &:focus-visible {
+        transform: translateY(-2px);
+        box-shadow: 0 12px 24px rgba(46, 138, 86, 0.35);
+      }
+    }
+  }
+}

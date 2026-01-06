@@ -1,0 +1,60 @@
+.impact-stats {
+  padding: clamp(2.5rem, 4vw, 4rem) clamp(1.5rem, 3vw, 4.5rem);
+
+  .stats-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    gap: 1.5rem;
+
+    @media (min-width: 900px) {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+
+  .stat-card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 18px;
+    padding: 1.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    box-shadow: var(--shadow-soft);
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: var(--color-text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.72rem;
+    }
+
+    .stat-value {
+      font-family: var(--font-heading);
+      font-size: 2rem;
+    }
+
+    .stat-meta {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--color-success);
+      font-weight: 600;
+    }
+
+    .progress {
+      position: relative;
+
+      .progress-track {
+        background: rgba(255, 255, 255, 0.06);
+
+        &::after {
+          background: linear-gradient(90deg, var(--color-primary), var(--color-primary-light));
+        }
+      }
+    }
+  }
+}
